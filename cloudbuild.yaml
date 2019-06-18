@@ -37,5 +37,5 @@ steps:
 
         IMAGE="gcr.io/$PROJECT_ID/google-demo:$SHORT_SHA"
 
-        sed -i 's|gcr.io/PROJECT_ID/google-demo:.*|$IMAGE|' ./kubernetes/deployments/*.yaml
-        kubectl apply --namespace google-demo --recursive -f kubernetes/deployments
+        sed -i 's|gcr.io/PROJECT_ID/google-demo:.*|$IMAGE|' ./kubernetes/*.yaml
+        kubectl apply --namespace google-demo --recursive -f kubernetes
