@@ -20,8 +20,8 @@ steps:
   - id: Deploy
     name: 'gcr.io/cloud-builders/gcloud'
     env:
-      - 'CLOUDSDK_COMPUTE_ZONE=${_CLOUDSDK_COMPUTE_ZONE}'
-      - 'CLOUDSDK_CONTAINER_CLUSTER=${_CLOUDSDK_CONTAINER_CLUSTER}'
+      - 'CLOUDSDK_COMPUTE_ZONE=europe-west2-a'
+      - 'CLOUDSDK_CONTAINER_CLUSTER=reaktor-cluster'
       - 'KUBECONFIG=/kube/config'
     entrypoint: 'bash'
     args:
