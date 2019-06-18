@@ -36,7 +36,5 @@ steps:
           --zone "$${ZONE}"
 
         sed -i 's|gcr.io/PROJECT_ID/5asec-pos-web:.*|gcr.io/$PROJECT_ID/5asec-pos-web/feature:$SHORT_SHA|' ./kubernetes/deployments/*.yaml
-        sed -i 's|_BASE_DOMAIN_|${_BASE_DOMAIN}|' ./kubernetes/deployments/*.yaml
-        sed -i 's|_ENV_|${_BRANCH_NAME}|' ./kubernetes/deployments/*.yaml
 
-        kubectl apply --namespace ${_BRANCH_NAME} --recursive -f kubernetes/deployments
+#        kubectl apply --namespace ${_BRANCH_NAME} --recursive -f kubernetes/deployments
