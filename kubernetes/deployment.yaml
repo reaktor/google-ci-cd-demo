@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: gcr.io/PROJECT_ID/google-talk-demo:1.0.0
+          image: gcr.io/PROJECT_ID/google-demo:1.0.0
           imagePullPolicy: Always
           readinessProbe:
             httpGet:
