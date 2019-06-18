@@ -36,6 +36,5 @@ steps:
           --zone "$${ZONE}"
 
         IMAGE="gcr.io/$PROJECT_ID/google-demo:$SHORT_SHA"
-
-        sed -i 's|gcr.io/PROJECT_ID/google-demo:.*|$IMAGE|' ./kubernetes/*.yaml
+        sed -i 's|gcr.io/PROJECT_ID/google-demo:.*|$${IMAGE}|' ./kubernetes/*.yaml
         kubectl apply --namespace google-demo --recursive -f kubernetes
